@@ -70,7 +70,6 @@ export class FilterHeaderComponent implements OnInit {
   }
 //Пошук
   find() {
-    this.catsApiService.imgs_url.next( [''])
     if (this.selected_breeds) {
 
       // @ts-ignore
