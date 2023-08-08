@@ -1,0 +1,11 @@
+<div class="imgs_container" *ngIf="imgs_list.length>0;else loadingBlock">
+  <mat-card *ngFor="let url of imgs_list">
+    <img mat-card-image [src]="url">
+  </mat-card>
+</div>
+<ng-template #loadingBlock>
+  <p style="text-align: center">
+    Зробіть свій перший пошук)
+  </p>
+
+</ng-template>

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+
+  .selectBlock {
+    margin-right: 40px;
+    width: auto;
+  }
+
+  .filtersBlock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    mat-card {
+      width: auto;
+      height: 40px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    .mat-card-header {
+      align-items: center;
+    }
+
+    .mat-card-title {
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    button {
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+  .searchBlock {
+    width: auto;
+  }
+}
+
+

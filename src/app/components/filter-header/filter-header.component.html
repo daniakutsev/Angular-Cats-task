@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="selectBlock">
+    <mat-form-field>
+      <mat-label>Виберіть породу кота</mat-label>
+      <mat-select [(ngModel)]="currentBreed" (ngModelChange)="onChange($event)">
+        <mat-option *ngFor="let breed of cats_breeds" [value]="breed.id">
+          {{breed.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Кількість</mat-label>
+      <input matInput type="number" max="100" min="1" placeholder="Кількість котиків" [(ngModel)]="limit">
+      <mat-hint align="end">Максимум 100</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="filtersBlock">
+    <mat-card *ngFor="let buff of selected_breeds">
+      <mat-card-header>
+        <mat-card-title> {{buff.name}}</mat-card-title>
+        <button mat-button (click)="deleteBreed(buff.name)">
+          <img src="/assets/delete_icon.png" alt="">
+        </button>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <div class="searchBlock">
+    <button mat-button (click)="find()">Пошук</button>
+  </div>
+</div>
+
+
+<app-image-main-block></app-image-main-block>
